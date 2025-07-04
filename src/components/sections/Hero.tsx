@@ -46,13 +46,13 @@ export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex flex-col justify-center overflow-hidden">
       <AnimatedBackground />
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full max-w-7xl mx-auto px-8">
-        <div className="flex flex-col items-start text-left">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+        <div className="flex flex-col items-start text-left order-2 lg:order-1">
           <motion.h1
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-6xl md:text-8xl font-bold vibrant-gradient-text mb-6 leading-tight"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold vibrant-gradient-text mb-4 sm:mb-6 leading-tight"
             style={{ fontFamily: 'SF Pro Display, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif' }}
           >
             {firstName} {lastName}
@@ -61,7 +61,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-neutral-300 mb-10 max-w-xl"
+            className="text-lg sm:text-xl md:text-2xl text-neutral-300 mb-6 sm:mb-8 lg:mb-10 max-w-xl"
           >
             Data Analytics professional specializing in predictive modeling, business intelligence, and translating data insights into measurable business impact.
           </motion.p>
@@ -69,7 +69,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex flex-row gap-4"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto"
           >
             {socialLinks.map((link) => (
               <motion.a
@@ -77,22 +77,22 @@ export default function Hero() {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 px-6 py-3 rounded-xl text-lg font-semibold min-w-[160px] justify-center text-white hero-glass-button"
+                className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl text-base sm:text-lg font-semibold min-w-[140px] sm:min-w-[160px] justify-center text-white hero-glass-button"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <link.icon className="h-6 w-6" />
+                <link.icon className="h-5 w-5 sm:h-6 sm:w-6" />
                 {link.name}
               </motion.a>
             ))}
           </motion.div>
         </div>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center order-1 lg:order-2 mb-8 lg:mb-0">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="relative h-80 w-80 md:h-96 md:w-96"
+            className="relative h-64 w-64 sm:h-72 sm:w-72 md:h-80 md:w-80 lg:h-96 lg:w-96"
           >
             <div className="glassy-image-ring">
               <div className="inner-image">
@@ -109,20 +109,20 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
-      <a href="#about" className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center group">
+      <a href="#about" className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center group">
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
           className="transition-transform group-hover:scale-110"
         >
-          <ChevronDown className="h-10 w-10 text-white/50 animate-bounce" />
+          <ChevronDown className="h-8 w-8 sm:h-10 sm:w-10 text-white/50 animate-bounce" />
         </motion.div>
         <motion.span 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.2 }}
-          className="mt-2 text-sm text-white/50"
+          className="mt-2 text-xs sm:text-sm text-white/50"
         >
           Scroll to explore
         </motion.span>
